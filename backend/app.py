@@ -17,7 +17,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "https://mere-vie.vercel.app"]}})  # Enable CORS for specific origins
 
 # Get the Gemini API key from environment variables
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
@@ -464,4 +464,5 @@ def medication_reminders():
     return jsonify(sample_reminders)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
