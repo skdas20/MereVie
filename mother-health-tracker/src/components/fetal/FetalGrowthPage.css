@@ -1,0 +1,214 @@
+.fetal-growth-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  margin-bottom: 30px;
+}
+
+.fetal-growth-page h1 {
+  color: #e1bee7;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.week-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: rgba(106, 27, 154, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.week-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e1bee7;
+  margin-bottom: 15px;
+}
+
+.week-slider {
+  width: 90%;
+  max-width: 600px;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #e1bee7, #9c27b0);
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.week-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #9c27b0;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.week-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #9c27b0;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.week-range {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 600px;
+  color: #e1bee7;
+  font-weight: 500;
+}
+
+.visualization-container {
+  margin-bottom: 40px;
+}
+
+.fetal-info-container {
+  margin-bottom: 40px;
+  background-color: rgba(249, 244, 252, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fetal-info-container h2 {
+  color: #6a1b9a;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  color: #6a1b9a;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.info-card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.fetal-milestones {
+  margin-bottom: 40px;
+}
+
+.fetal-milestones h2 {
+  color: #e1bee7;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.milestone-timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.milestone-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #e1bee7, #9c27b0, #6a1b9a);
+}
+
+.milestone {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.milestone-dot {
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #9c27b0;
+  border: 3px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.milestone h3 {
+  color: #e1bee7;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.milestone p {
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .fetal-growth-page h1 {
+    font-size: 1.8rem;
+  }
+  
+  .week-label {
+    font-size: 1.3rem;
+  }
+  
+  .fetal-info-container h2,
+  .fetal-milestones h2 {
+    font-size: 1.5rem;
+  }
+  
+  .milestone h3,
+  .info-card h3 {
+    font-size: 1.2rem;
+  }
+}
